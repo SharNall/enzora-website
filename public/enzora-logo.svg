@@ -1,0 +1,30 @@
+<svg width="480" height="128" viewBox="0 0 480 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ribbonBlue" x1="26" y1="12" x2="82" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#3347C9"/>
+    </linearGradient>
+    <linearGradient id="ribbonViolet" x1="40" y1="56" x2="96" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B794F4"/>
+      <stop offset="1" stop-color="#D6BCFA"/>
+    </linearGradient>
+    <linearGradient id="bridge" x1="38" y1="36" x2="72" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A5F3FC"/>
+      <stop offset="1" stop-color="#93C5FD"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10 8)">
+    <path d="M68 2C79 10 82 25 74 36L56 58L28 48L55 20C62 13 64 8 68 2Z" fill="url(#ribbonBlue)"/>
+    <path d="M28 48L56 58L74 83C82 93 80 104 70 108C63 111 54 105 49 96L34 72C31 66 28 56 28 48Z" fill="url(#ribbonViolet)"/>
+    <path d="M22 40C35 28 46 28 56 36L70 46L56 59L40 52C33 49 27 45 22 40Z" fill="url(#bridge)"/>
+    <rect x="40" y="39" width="20" height="13" rx="5" fill="#F0F9FF" opacity="0.95"/>
+    <circle cx="45" cy="43" r="2" fill="#A7F3D0"/>
+    <circle cx="51" cy="43" r="2" fill="#86EFAC"/>
+    <circle cx="56" cy="47" r="2" fill="#6EE7B7"/>
+    <circle cx="47" cy="47" r="2" fill="#99F6E4"/>
+  </g>
+
+  <text x="130" y="75" fill="#1E3A8A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="74" font-weight="700" letter-spacing="0.2">Enzora</text>
+  <text x="133" y="106" fill="#4F83C4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="500" letter-spacing="0.2">Smart Wound Patch</text>
+</svg>
