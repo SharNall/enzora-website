@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/lib/auth-context";
 import { getAllOrders, updateOrderStatus, deleteOrder, OrderData } from "@/lib/firebase/orders";
 import {
   getAllInventoryItems,
@@ -18,6 +19,7 @@ import {
 
 export default function AdminPage() {
   const router = useRouter();
+  const { user, loading: authLoading, logout } = useAuth();
   const [activeTab, setActiveTab] = useState<"orders" | "inventory" | "accounting">("orders");
   const [orders, setOrders] = useState<OrderData[]>([]);
   const [inventory, setInventory] = useState<InventoryItem[]>([]);
@@ -105,10 +107,20 @@ export default function AdminPage() {
   };
 
   const handleLogout = async () => {
-    await fetch("/api/admin/logout", { method: "POST" });
-    router.push("/admin/login");
-    router.refresh();
+    await logout();
   };
+
+  if (authLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center">
+        <div className="text-white">Loading...</div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return null;
+  }
 
   const filteredOrders = orderFilter === "all" ? orders : orders.filter((o) => o.status === orderFilter);
 
@@ -121,7 +133,7 @@ export default function AdminPage() {
             <h1 className="text-5xl font-bold bg-gradient-to-r from-[#6E75BF] to-[#6E75BF] bg-clip-text text-transparent mb-2">
               Admin Dashboard
             </h1>
-            <p className="text-slate-600">Manage orders, inventory, and finances</p>
+            <p className="text-slate-600">Welcome, {user.email} • Manage orders, inventory, and finances</p>
           </div>
           <button
             onClick={handleLogout}
