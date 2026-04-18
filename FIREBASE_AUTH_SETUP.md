@@ -41,15 +41,10 @@ In Firebase Console (enzora-website project):
 
 ### 2. Environment Variables
 
-Already configured in `.env.local`:
-```
-NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyCdoFfHXJUP9brDCrnlzKvok8xaiV1zGtA
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=enzora-website.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=enzora-website
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=enzora-website.firebasestorage.app
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=575382338306
-NEXT_PUBLIC_FIREBASE_APP_ID=1:575382338306:web:d02475ad6f789036c4601b
-```
+Already configured in `.env.local`. See `.env.example` for the template structure.
+
+**Note:** Never commit `.env.local` to Git - it contains sensitive Firebase credentials!
+Use `.env.example` for version control instead.
 
 ## File Structure
 
