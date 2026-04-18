@@ -9,7 +9,7 @@ import { ProductShowcaseSection } from "@/components/landing/product-showcase-se
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
+    <main className="min-h-screen bg-gradient-to-b from-[#f5f8ff] via-[#ffffff] to-[#f5f8ff] text-slate-900">
       <Navbar />
       <HeroSection />
       <AboutSection />
